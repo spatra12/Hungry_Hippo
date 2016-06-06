@@ -125,7 +125,7 @@ public class Wild extends Canvas implements KeyListener, Runnable
 		int count = 0; 
 		//add in collision detection
 		
-		while(count < 10)
+		while(count < 1)
 		{
 			if ((Math.abs(melon.getX()-hippo.getX())<20 && 
 					Math.abs(melon.getY()-hippo.getY())<20  ))
@@ -135,10 +135,9 @@ public class Wild extends Canvas implements KeyListener, Runnable
 				melon = melons.get(counter);
 				
 				counter++; 
-				
+				graphToBack.drawString(counter +" watermelons fed", 600, 100);
 			}
 			
-			graphToBack.drawString(counter +" watermelons fed", 600, 100);
 			count++; 
 		}
 		
