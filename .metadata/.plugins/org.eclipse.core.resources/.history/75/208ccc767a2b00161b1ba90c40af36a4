@@ -27,7 +27,7 @@ public class Hippo extends MovingThing
 		speed=s;
 		try
 		{
-			image = ImageIO.read(new File("src/finalproject/Hippo_mouth_opening.jpg"));
+			image = ImageIO.read(new File("src/unit17/ship.jpg"));
 		}
 		catch(Exception e)
 		{

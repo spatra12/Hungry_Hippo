@@ -45,7 +45,7 @@ public class Melon extends MovingThing
 		window.setColor(Color.GREEN); 
 		
 		window.drawOval(super.getX(), super.getY(), 40, 40);
-		window.fillOval(super.getX(), super.getY(), 40, 40);
+		window.fillRect(super.getX(), super.getY(), 5, 15);
 	}
 
 	public String toString()

@@ -42,10 +42,10 @@ public class Melon extends MovingThing
 	public void draw( Graphics window )
 	{
 		//add code to draw the ammo
-		window.setColor(Color.GREEN); 
+		window.setColor(Color.YELLOW); 
 		
-		window.drawOval(super.getX(), super.getY(), 40, 40);
-		window.fillOval(super.getX(), super.getY(), 40, 40);
+		window.drawRect(super.getX(), super.getY(), 5, 15);
+		window.fillRect(super.getX(), super.getY(), 5, 15);
 	}
 
 	public String toString()

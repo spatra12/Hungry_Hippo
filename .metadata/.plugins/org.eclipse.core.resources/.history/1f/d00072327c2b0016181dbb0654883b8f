@@ -30,13 +30,13 @@ public class Wild extends Canvas implements KeyListener, Runnable
 		keys = new boolean[5];
 
 		//instantiate other stuff
-		hippo = new Hippo(300, 300); 
-		hippo.setSpeed(15);
+		ship = new Ship(300, 300); 
+		ship.setSpeed(15);
 		
-		melon = new Melon(100, 100); 
-		melon.setSpeed(2);
+		alienOne = new Alien(100, 100); 
+		alienOne.setSpeed(2);
 		
-		//ammo = new Ammo(ship.getX()+40, ship.getY(), 2);
+		ammo = new Ammo(ship.getX()+40, ship.getY(), 2);
 		
 
 		this.addKeyListener(this);
