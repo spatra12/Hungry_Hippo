@@ -127,14 +127,10 @@ public class Wild extends Canvas implements KeyListener, Runnable
 			if ((Math.abs(melon.getX()-hippo.getX())<20 && 
 					Math.abs(melon.getY()-hippo.getY())<20  ))
 			{
-				//melon = melons.get((int)Math.random()*10);
-				
-				melon = null;
-				
-				counter++; 
+				melon = melons.get((int)Math.random()*10);
+
 			}
-		
-		graphToBack.drawString(counter +" watermelons fed", 600, 100);
+			
 
 		twoDGraph.drawImage(back, null, 0, 0);
 	}
