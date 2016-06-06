@@ -121,16 +121,16 @@ public class Wild extends Canvas implements KeyListener, Runnable
 				hippo.move("DOWN");
 		}
 		
-		int counter = 0; 
+
 		//add in collision detection
 
 			if ((Math.abs(melon.getX()-hippo.getX())<20 && 
 					Math.abs(melon.getY()-hippo.getY())<20  ))
 			{
-				melon = melons.get((int)Math.random()*10);
+				
 
 			}
-			
+
 
 
 		twoDGraph.drawImage(back, null, 0, 0);

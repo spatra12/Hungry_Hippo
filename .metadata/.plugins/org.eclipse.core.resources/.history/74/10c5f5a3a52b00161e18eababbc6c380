@@ -123,7 +123,8 @@ public class Wild extends Canvas implements KeyListener, Runnable
 		
 		int counter = 0; 
 		//add in collision detection
-
+		do
+		{
 			if ((Math.abs(melon.getX()-hippo.getX())<20 && 
 					Math.abs(melon.getY()-hippo.getY())<20  ))
 			{
@@ -131,6 +132,9 @@ public class Wild extends Canvas implements KeyListener, Runnable
 
 			}
 			
+			counter++; 
+		}while(counter < Math.random()*20);
+
 
 
 		twoDGraph.drawImage(back, null, 0, 0);
