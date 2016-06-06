@@ -47,10 +47,10 @@ public class Wild extends Canvas implements KeyListener, Runnable
 
    public void update(Graphics window)
    {
-	   if(melon != null)
+	   if(alienOne != null)
 	   {		   
 		   
-		   melon.move("RIGHT");
+		   alienOne.move("RIGHT");
 	   }
 	   
 	  
@@ -78,47 +78,57 @@ public class Wild extends Canvas implements KeyListener, Runnable
 		graphToBack.drawString("StarFighter ", 25, 50 );
 		
 		//draw ship
-		hippo.draw(graphToBack);
+		ship.draw(graphToBack);
 		
 		//draw ammo
-		if(melon != null)
-			melon.draw(graphToBack);
+		if(ammo != null)
+			ammo.draw(graphToBack);
 			
+		if(alienOne != null)
+			alienOne.draw(graphToBack);
+		
 		
 
 		if(keys[0] == true)
 		{
-			if(hippo.getX() > -20)
-			hippo.move("LEFT");
+			if(ship.getX() > -20)
+			ship.move("LEFT");
 		}
 
 		//add code to move stuff
 		if(keys[1] == true)
 		{
-			if(hippo.getX() < getWidth()-60)
-				hippo.move("RIGHT");
+			if(ship.getX() < getWidth()-60)
+				ship.move("RIGHT");
 		}
 		
 		if(keys[2] == true)
 		{
-			if(hippo.getY() > 60)
-				hippo.move("UP");
+			if(ship.getY() > 60)
+				ship.move("UP");
 		}
 
 		if(keys[3] == true)
 		{
-			if(hippo.getY() < 400)
-				hippo.move("DOWN");
+			if(ship.getY() < 400)
+				ship.move("DOWN");
 		}
 		
-
+		//for ammo
+		if(keys[4] == true)
+		{			
+				ammo.setSpeed(25);
+				ammo.move("UP");			
+		}
+		
 		//add in collision detection
-		if(melon != null)
+		if(ammo != null)
 		{
-			if ((Math.abs(melon.getX()-hippo.getX())<20 && 
-					Math.abs(melon.getY()-hippo.getY())<20  ))
+			if ((Math.abs(ammo.getX()-alienOne.getX())<20 && 
+					Math.abs(ammo.getY()-alienOne.getY())<20  ))
 			{
-				melon = null;
+				ammo = null;
+				alienOne = null;
 			}
 		}
 		
