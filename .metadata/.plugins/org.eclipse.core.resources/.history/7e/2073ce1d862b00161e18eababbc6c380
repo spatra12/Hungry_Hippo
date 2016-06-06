@@ -34,7 +34,7 @@ public class Wild extends Canvas implements KeyListener, Runnable
 		hippo.setSpeed(15);
 		
 		melon = new Melon(100, 100); 
-		melon.setSpeed(1);
+		melon.setSpeed(4);
 		
 		//ammo = new Ammo(ship.getX()+40, ship.getY(), 2);
 		
@@ -50,7 +50,7 @@ public class Wild extends Canvas implements KeyListener, Runnable
 	   if(melon != null)
 	   {		   
 		   
-		   melon.move("DOWN");
+		   melon.move("RIGHT");
 	   }
 	   
 	  
@@ -115,14 +115,12 @@ public class Wild extends Canvas implements KeyListener, Runnable
 		
 
 		//add in collision detection
-
 			if ((Math.abs(melon.getX()-hippo.getX())<20 && 
 					Math.abs(melon.getY()-hippo.getY())<20  ))
 			{
-				melon = null;
-
+				melon.setPos(0, 0);
 			}
-
+		
 
 
 		twoDGraph.drawImage(back, null, 0, 0);
